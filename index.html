@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Snake - Hacker Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/neon-effects.css">
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    
+    <div class="game-container">
+        <!-- Header Section -->
+        <header class="game-header">
+            <h1 class="neon-title" data-text="NEON_SNAKE">NEON_SNAKE</h1>
+            <div class="hacker-terminal">
+                <div class="terminal-header">
+                    <span class="terminal-title">SYSTEM_CONTROL</span>
+                    <div class="terminal-buttons">
+                        <span class="terminal-btn"></span>
+                        <span class="terminal-btn"></span>
+                        <span class="terminal-btn"></span>
+                    </div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">> INITIALIZING NEON_SNAKE_PROTOCOL...</div>
+                    <div class="terminal-line">> SYSTEM_STATUS: <span class="status-online">ONLINE</span></div>
+                    <div class="terminal-line">> WEAPON_SYSTEM: <span class="status-standby">STANDBY</span></div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Game Area -->
+        <main class="game-main">
+            <div class="game-stats">
+                <div class="stat-box">
+                    <span class="stat-label">LEVEL</span>
+                    <span class="stat-value neon-cyan" id="level-display">001</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">SCORE</span>
+                    <span class="stat-value neon-green" id="score-display">00000</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-label">WEAPON</span>
+                    <span class="stat-value neon-purple" id="weapon-display">BASIC</span>
+                </div>
+            </div>
+
+            <div class="game-area">
+                <canvas id="gameCanvas" width="800" height="600"></canvas>
+                <div class="scanlines"></div>
+                <div class="glow-overlay"></div>
+            </div>
+
+            <div class="weapon-selector">
+                <div class="weapon-slots">
+                    <div class="weapon-slot active" data-weapon="basic">
+                        <span class="weapon-icon">⚡</span>
+                        <span class="weapon-name">BASIC</span>
+                    </div>
+                    <div class="weapon-slot" data-weapon="laser">
+                        <span class="weapon-icon">🔫</span>
+                        <span class="weapon-name">LASER</span>
+                    </div>
+                    <div class="weapon-slot" data-weapon="plasma">
+                        <span class="weapon-icon">💥</span>
+                        <span class="weapon-name">PLASMA</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Controls and Instructions -->
+        <footer class="game-footer">
+            <div class="controls-info">
+                <div class="control-item">
+                    <span class="key">WASD</span>
+                    <span class="action">MOVE SNAKE</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">SPACE</span>
+                    <span class="action">USE WEAPON</span>
+                </div>
+                <div class="control-item">
+                    <span class="key">P</span>
+                    <span class="action">PAUSE</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Start Screen -->
+    <div id="startScreen" class="screen active">
+        <div class="screen-content">
+            <h2 class="neon-title-large" data-text="NEON_SNAKE">NEON_SNAKE</h2>
+            <p class="subtitle">HACKER EDITION</p>
+            <div class="menu-options">
+                <button id="startGame" class="neon-btn">START_GAME</button>
+                <button class="neon-btn">WEAPONS_LIBRARY</button>
+                <button class="neon-btn">LEVEL_SELECT</button>
+            </div>
+            <div class="hacker-quote">
+                "ACCESS THE MATRIX. BREAK THE SYSTEM."
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Over Screen -->
+    <div id="gameOverScreen" class="screen">
+        <div class="screen-content">
+            <h2 class="neon-title-red" data-text="SYSTEM_FAILURE">SYSTEM_FAILURE</h2>
+            <div class="game-stats-final">
+                <div class="final-stat">
+                    <span>FINAL SCORE:</span>
+                    <span id="finalScore" class="neon-green">00000</span>
+                </div>
+                <div class="final-stat">
+                    <span>LEVEL REACHED:</span>
+                    <span id="finalLevel" class="neon-cyan">001</span>
+                </div>
+                <div class="final-stat">
+                    <span>WEAPONS UNLOCKED:</span>
+                    <span id="finalWeapons" class="neon-purple">01/100</span>
+                </div>
+            </div>
+            <div class="menu-options">
+                <button id="restartGame" class="neon-btn">REBOOT_SYSTEM</button>
+                <button class="neon-btn">MAIN_FRAME</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/snake.js"></script>
+    <script src="js/food.js"></script>
+    <script src="js/weapons.js"></script>
+    <script src="js/levels.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

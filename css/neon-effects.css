@@ -1,0 +1,598 @@
+/* Neon Text Effects */
+.neon-text {
+    color: #0f0;
+    text-shadow: 
+        0 0 5px #0f0,
+        0 0 10px #0f0,
+        0 0 15px #0f0,
+        0 0 20px #0f0,
+        0 0 35px #0f0,
+        0 0 40px #0f0;
+}
+
+.neon-text-cyan {
+    color: #0ff;
+    text-shadow: 
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 15px #0ff,
+        0 0 20px #0ff,
+        0 0 35px #0ff,
+        0 0 40px #0ff;
+}
+
+.neon-text-purple {
+    color: #f0f;
+    text-shadow: 
+        0 0 5px #f0f,
+        0 0 10px #f0f,
+        0 0 15px #f0f,
+        0 0 20px #f0f,
+        0 0 35px #f0f,
+        0 0 40px #f0f;
+}
+
+.neon-text-red {
+    color: #f00;
+    text-shadow: 
+        0 0 5px #f00,
+        0 0 10px #f00,
+        0 0 15px #f00,
+        0 0 20px #f00,
+        0 0 35px #f00,
+        0 0 40px #f00;
+}
+
+.neon-text-blue {
+    color: #00f;
+    text-shadow: 
+        0 0 5px #00f,
+        0 0 10px #00f,
+        0 0 15px #00f,
+        0 0 20px #00f,
+        0 0 35px #00f,
+        0 0 40px #00f;
+}
+
+.neon-text-yellow {
+    color: #ff0;
+    text-shadow: 
+        0 0 5px #ff0,
+        0 0 10px #ff0,
+        0 0 15px #ff0,
+        0 0 20px #ff0,
+        0 0 35px #ff0,
+        0 0 40px #ff0;
+}
+
+/* Neon Border Effects */
+.neon-border {
+    border: 2px solid #0f0;
+    box-shadow: 
+        inset 0 0 10px #0f0,
+        0 0 10px #0f0,
+        inset 0 0 20px #0f0,
+        0 0 20px #0f0,
+        inset 0 0 30px #0f0,
+        0 0 30px #0f0;
+}
+
+.neon-border-cyan {
+    border: 2px solid #0ff;
+    box-shadow: 
+        inset 0 0 10px #0ff,
+        0 0 10px #0ff,
+        inset 0 0 20px #0ff,
+        0 0 20px #0ff,
+        inset 0 0 30px #0ff,
+        0 0 30px #0ff;
+}
+
+.neon-border-purple {
+    border: 2px solid #f0f;
+    box-shadow: 
+        inset 0 0 10px #f0f,
+        0 0 10px #f0f,
+        inset 0 0 20px #f0f,
+        0 0 20px #f0f,
+        inset 0 0 30px #f0f,
+        0 0 30px #f0f;
+}
+
+.neon-border-red {
+    border: 2px solid #f00;
+    box-shadow: 
+        inset 0 0 10px #f00,
+        0 0 10px #f00,
+        inset 0 0 20px #f00,
+        0 0 20px #f00,
+        inset 0 0 30px #f00,
+        0 0 30px #f00;
+}
+
+/* Neon Glow Effects */
+.neon-glow {
+    filter: drop-shadow(0 0 5px #0f0) 
+            drop-shadow(0 0 10px #0f0)
+            drop-shadow(0 0 15px #0f0)
+            drop-shadow(0 0 20px #0f0);
+}
+
+.neon-glow-cyan {
+    filter: drop-shadow(0 0 5px #0ff) 
+            drop-shadow(0 0 10px #0ff)
+            drop-shadow(0 0 15px #0ff)
+            drop-shadow(0 0 20px #0ff);
+}
+
+.neon-glow-purple {
+    filter: drop-shadow(0 0 5px #f0f) 
+            drop-shadow(0 0 10px #f0f)
+            drop-shadow(0 0 15px #f0f)
+            drop-shadow(0 0 20px #f0f);
+}
+
+.neon-glow-red {
+    filter: drop-shadow(0 0 5px #f00) 
+            drop-shadow(0 0 10px #f00)
+            drop-shadow(0 0 15px #f00)
+            drop-shadow(0 0 20px #f00);
+}
+
+/* Neon Background Effects */
+.neon-bg {
+    background: 
+        radial-gradient(circle at center, rgba(0, 255, 0, 0.1) 0%, transparent 70%),
+        linear-gradient(45deg, rgba(0, 255, 0, 0.05) 0%, transparent 50%, rgba(0, 255, 0, 0.05) 100%);
+    position: relative;
+}
+
+.neon-bg::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(0, 255, 0, 0.05) 0%, transparent 50%);
+    z-index: -1;
+    border-radius: inherit;
+}
+
+.neon-bg-cyan {
+    background: 
+        radial-gradient(circle at center, rgba(0, 255, 255, 0.1) 0%, transparent 70%),
+        linear-gradient(45deg, rgba(0, 255, 255, 0.05) 0%, transparent 50%, rgba(0, 255, 255, 0.05) 100%);
+}
+
+.neon-bg-cyan::before {
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+/* Neon Button Effects */
+.neon-btn-effect {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.neon-btn-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.4), transparent);
+    transition: left 0.5s ease;
+}
+
+.neon-btn-effect:hover::before {
+    left: 100%;
+}
+
+.neon-btn-effect:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 0 15px #0f0,
+        0 0 30px #0f0,
+        0 0 45px #0f0;
+}
+
+/* Neon Grid System */
+.neon-grid {
+    background-image: 
+        linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+    position: relative;
+}
+
+.neon-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 30%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(0, 255, 0, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+/* Neon Scan Lines */
+.neon-scanlines {
+    position: relative;
+}
+
+.neon-scanlines::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 255, 0, 0.03) 0.5%,
+        transparent 1%
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Neon Particle Effects */
+.neon-particle {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: #0f0;
+    border-radius: 50%;
+    box-shadow: 
+        0 0 5px #0f0,
+        0 0 10px #0f0,
+        0 0 15px #0f0;
+    animation: neon-particle-float 3s ease-in-out infinite;
+}
+
+@keyframes neon-particle-float {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+        opacity: 0;
+    }
+    25% {
+        opacity: 1;
+    }
+    50% {
+        transform: translate(20px, -20px) scale(1.2);
+        opacity: 0.7;
+    }
+    75% {
+        opacity: 0.3;
+    }
+}
+
+/* Neon Data Stream Effect */
+.data-stream {
+    position: relative;
+    overflow: hidden;
+}
+
+.data-stream::before {
+    content: '01010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101010101';
+    position: absolute;
+    white-space: nowrap;
+    color: rgba(0, 255, 0, 0.1);
+    font-size: 8px;
+    letter-spacing: 2px;
+    animation: data-stream-flow 20s linear infinite;
+}
+
+@keyframes data-stream-flow {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Neon Code Rain */
+.code-rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.code-character {
+    position: absolute;
+    color: #0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    text-shadow: 0 0 5px #0f0;
+    animation: code-fall linear infinite;
+    opacity: 0;
+}
+
+@keyframes code-fall {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Neon Hologram Effect */
+.hologram-effect {
+    position: relative;
+}
+
+.hologram-effect::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: 
+        linear-gradient(45deg, 
+            transparent 0%, 
+            rgba(0, 255, 0, 0.1) 25%, 
+            transparent 50%, 
+            rgba(0, 255, 0, 0.1) 75%, 
+            transparent 100%);
+    background-size: 200% 200%;
+    animation: hologram-scan 3s linear infinite;
+    z-index: -1;
+    border-radius: inherit;
+}
+
+@keyframes hologram-scan {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Neon Circuit Board */
+.circuit-board {
+    background-image: 
+        /* Horizontal lines */
+        linear-gradient(90deg, transparent 79%, rgba(0, 255, 0, 0.1) 79%, rgba(0, 255, 0, 0.1) 81%, transparent 81%),
+        linear-gradient(90deg, transparent 39%, rgba(0, 255, 0, 0.1) 39%, rgba(0, 255, 0, 0.1) 41%, transparent 41%),
+        /* Vertical lines */
+        linear-gradient(transparent 79%, rgba(0, 255, 0, 0.1) 79%, rgba(0, 255, 0, 0.1) 81%, transparent 81%),
+        linear-gradient(transparent 39%, rgba(0, 255, 0, 0.1) 39%, rgba(0, 255, 0, 0.1) 41%, transparent 41%);
+    background-size: 100px 100px;
+    position: relative;
+}
+
+.circuit-board::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 25% 25%, rgba(0, 255, 0, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(0, 255, 0, 0.05) 0%, transparent 50%);
+}
+
+/* Neon Glitch Effect */
+.neon-glitch {
+    position: relative;
+}
+
+.neon-glitch::before,
+.neon-glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.neon-glitch::before {
+    color: #f0f;
+    animation: glitch-1 0.5s infinite linear alternate-reverse;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+}
+
+.neon-glitch::after {
+    color: #0ff;
+    animation: glitch-2 0.5s infinite linear alternate-reverse;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+}
+
+@keyframes glitch-1 {
+    0%, 14% { transform: translate(0); }
+    15%, 49% { transform: translate(-2px, 2px); }
+    50%, 84% { transform: translate(2px, -2px); }
+    85%, 100% { transform: translate(0); }
+}
+
+@keyframes glitch-2 {
+    0%, 24% { transform: translate(0); }
+    25%, 59% { transform: translate(2px, -2px); }
+    60%, 94% { transform: translate(-2px, 2px); }
+    95%, 100% { transform: translate(0); }
+}
+
+/* Neon Energy Field */
+.energy-field {
+    position: relative;
+    border: 1px solid rgba(0, 255, 0, 0.3);
+}
+
+.energy-field::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border: 2px solid transparent;
+    border-image: 
+        linear-gradient(45deg, #0f0, #0ff, #f0f, #0f0) 1;
+    animation: energy-pulse 2s linear infinite;
+    border-radius: inherit;
+}
+
+@keyframes energy-pulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.02);
+    }
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+}
+
+/* Neon Digital Noise */
+.digital-noise {
+    position: relative;
+}
+
+.digital-noise::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 255, 0, 0.03) 0px,
+            rgba(0, 255, 0, 0.03) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    animation: noise-shift 0.1s infinite;
+    pointer-events: none;
+}
+
+@keyframes noise-shift {
+    0% { transform: translate(0, 0); }
+    10% { transform: translate(-1px, 1px); }
+    20% { transform: translate(1px, -1px); }
+    30% { transform: translate(-1px, -1px); }
+    40% { transform: translate(1px, 1px); }
+    50% { transform: translate(-1px, 1px); }
+    60% { transform: translate(1px, -1px); }
+    70% { transform: translate(-1px, -1px); }
+    80% { transform: translate(1px, 1px); }
+    90% { transform: translate(-1px, 1px); }
+    100% { transform: translate(0, 0); }
+}
+
+/* Weapon Specific Neon Effects */
+.weapon-laser {
+    background: 
+        radial-gradient(circle at center, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #0ff,
+        inset 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.weapon-plasma {
+    background: 
+        radial-gradient(circle at center, rgba(255, 0, 255, 0.3) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #f0f,
+        inset 0 0 20px rgba(255, 0, 255, 0.2);
+}
+
+.weapon-electric {
+    background: 
+        radial-gradient(circle at center, rgba(255, 255, 0, 0.3) 0%, transparent 70%);
+    box-shadow: 
+        0 0 20px #ff0,
+        inset 0 0 20px rgba(255, 255, 0, 0.2);
+}
+
+/* Level Specific Neon Themes */
+.level-matrix {
+    background: 
+        linear-gradient(135deg, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(0, 255, 0, 0.1) 0%, transparent 50%);
+}
+
+.level-cyberspace {
+    background: 
+        linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.level-neon-city {
+    background: 
+        linear-gradient(135deg, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+        linear-gradient(225deg, rgba(255, 0, 255, 0.1) 0%, transparent 50%);
+}
+
+/* Achievement Unlock Neon Effect */
+.achievement-glow {
+    animation: achievement-pulse 2s ease-in-out;
+}
+
+@keyframes achievement-pulse {
+    0% {
+        box-shadow: 0 0 5px #ff0;
+    }
+    50% {
+        box-shadow: 0 0 30px #ff0, 0 0 50px #ff0;
+    }
+    100% {
+        box-shadow: 0 0 5px #ff0;
+    }
+}
+
+/* Combo Meter Neon Effect */
+.combo-meter-active {
+    background: 
+        linear-gradient(90deg, 
+            #0f0 0%, 
+            #0ff 25%, 
+            #f0f 50%, 
+            #ff0 75%, 
+            #f00 100%);
+    box-shadow: 
+        0 0 10px #0f0,
+        0 0 20px #0ff,
+        0 0 30px #f0f;
+    animation: combo-rainbow 1s linear infinite;
+}
+
+@keyframes combo-rainbow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
